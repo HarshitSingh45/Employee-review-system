@@ -1,1 +1,8 @@
-<h2>Header </h2>
+Header &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+<% if(locals.user) { %>
+    <a href="/users/destroy">LogOut</a>
+<% }else{ %>
+    <a href="/users/signup">Sign-Up</a>
+    &nbsp; 
+    <a href="/users/signin">Sign-In</a>
+<% } %>

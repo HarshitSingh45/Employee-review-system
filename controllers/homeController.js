@@ -1,3 +1,7 @@
 module.exports.home = (req, res) => {
-    return res.render('home');
+    if(req.user.isAdmin){
+        return res.render('homeAdmin');
+    }else{
+        return res.render('homeEmployee');
+    }
 }

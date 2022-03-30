@@ -26,7 +26,7 @@ module.exports.createUser = (req, res) => {
         }else{
             Employees.create(req.body, (err, employee) => {
                 if(err){ console.log('Error in creating the employee'); return}
-                return res.render('home');
+                return res.render('signin');
             })
         }
     })
@@ -34,5 +34,14 @@ module.exports.createUser = (req, res) => {
 
 module.exports.createSession = (req, res) => {
     console.log(req.user.isAdmin);
-    return res.render('home');
+    if(req.user.isAdmin){
+        return res.redirect('/');
+    }else{
+        return res.redirect('/');
+    }
+}
+
+module.exports.destroySession = (req, res) => {
+    req.logOut();
+    return res.redirect('/');
 }

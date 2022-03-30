@@ -1,0 +1,50 @@
+#container{
+    #select{
+        display: inline-block;
+        width: 25%;
+        height: auto;
+        min-height: 100vh;
+        border: 1px solid blue;
+        vertical-align: top;
+        text-align: center;
+        background-color: black;
+        div{
+            color: gainsboro;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    }
+    #selected-content{
+        display: inline-block;
+        width: 72%;
+        height: auto;
+        min-height: 100vh;
+        border: 1px solid coral;
+        text-align: center;
+
+        #heading{
+            text-align: center;
+        }
+        .emp{
+            width: 90%;
+            font-size: 1.5rem;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            .emp-name{
+                text-align: left;
+                display: inline-block;
+                width: 50%;
+            }
+            .emp-actions{
+                display: inline-block;
+                width: 45%;
+                a{
+                    text-decoration: none;
+                }
+            }
+
+        }
+        
+    }
+}
