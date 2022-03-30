@@ -1,17 +1,20 @@
 <h1>Hello !! <%= locals.user.name  %></h1>
 <h2>Pending Reviews</h2>
 <div id="review-container">
-    <div>
-        <h4>XYZ Performance Review</h4>
-        <form action="" method="post">
-            Is XYZ is friendly at workspace ? <br>
-            0<input type="range" name="friendly" min="0" max="10">10<br>
-            Is XYZ is cooperative while working together ? <br>
-            0<input type="range" name="cooperative" min="0" max="10">10<br>
-            What do you rate, XYZ's responsibility skills ? <br>
-            0<input type="range" name="responsible" min="0" max="10">10<br><br>
-            <input type="submit" value="submit">
+    <% for(let review of reviews) { %>
+        <div>
+            <h4><%= review.reviewOf.name %> Performance Review</h4>
+            <form action="/review/submit/<%= review._id %>" method="post">
+                Is <%= review.reviewOf.name %> is friendly at workspace ? <br>
+                0<input type="range" name="friendly" min="0" max="10">10<br>
+                Is <%= review.reviewOf.name %> is cooperative while working together ? <br>
+                0<input type="range" name="cooperative" min="0" max="10">10<br>
+                What do you rate, <%= review.reviewOf.name %>'s responsibility skills ? <br>
+                0<input type="range" name="responsible" min="0" max="10">10<br><br>
+                <input type="submit" value="submit">
+        
+            </form>
+        </div>
+    <% } %>
     
-        </form>
-    </div>
 </div>

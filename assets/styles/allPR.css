@@ -26,3 +26,8 @@
   text-align: center; }
   #container #selected-content #heading {
     text-align: center; }
+  #container #selected-content .rev {
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 15px; }

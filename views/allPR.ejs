@@ -13,9 +13,16 @@
         <h1 id="heading">All Performance Review</h1>
         <div id="all-pr-container">
             <% for(let review of reviews) { %>
-                <div>
-                    Review Of: <%= review.reviewOf.name %> <br>
-                    Review By: <%= review.reviewBy.name %>
+                <div class="rev">
+                    <p><span>Review Of: </span><span><%= review.reviewOf.name %></span></p>
+                    <% if(review.isReviewed){ %>
+                        <p>Friendly : <%= review.friendly %>/10</p>
+                        <p>Cooperative : <%= review.cooperative %>/10</p>
+                        <p>Responsible : <%= review.responsible %>/10</p>
+                        <p><span>Reviewed By: </span><span><%= review.reviewBy.name %></span></p>
+                    <% }else{ %>
+                        <h4>Not reviewed, <%= review.reviewBy.name %> needs to review this</h4>
+                    <% } %>
                 </div>
             <% } %>
         </div>
