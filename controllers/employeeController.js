@@ -36,3 +36,42 @@ module.exports.makeAdmin = async(req,res) => {
     })
 
 }
+
+module.exports.empDetails = async(req, res) => {
+    if(req.user.isAdmin){
+        let emp = await Employees.findById(req.params.id);
+        return res.render('empDetails',{
+            emp
+        })
+    }else{
+        return res.redirect('back');
+    } 
+}
+module.exports.updateEmpDetails = async(req, res) => {
+    try{
+        if(req.user.isAdmin){
+            let emp = await Employees.findById(req.params.id);
+            emp.name = req.body.name;
+            emp.email = req.body.email;
+            emp.save();
+            return res.render('empDetails',{
+                emp
+            })
+        }else{
+            return res.redirect('back');
+        } 
+    }catch(err){
+        console.log('Error in updating employee details');
+        return res.redirect('back');
+    }
+}
+
+module.exports.addEmp = (req, res) => {
+    return res.render('addEmp');
+}
+
+module.exports.createEmp = async(req, res) => {
+    let emp = Employees.create(req.body);
+    console.log(emp);
+    return res.redirect('/');
+}

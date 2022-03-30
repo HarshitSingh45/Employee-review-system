@@ -1,0 +1,12 @@
+<div>
+    <% if(locals.user) { %>
+        <%= emp.name %>
+        <%= emp.email %>
+    <% } %>
+    <h1>Update Employee Details</h1>
+    <form action= '/employees/update/<%= emp._id %>' method="post">
+        Name: <input type="text" name="name" placeholder="Enter your name" value="<%= emp.name %>"><br>
+        Email: <input type="email" name="email" placeholder="Enter email address"  value="<%= emp.email %>"><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>

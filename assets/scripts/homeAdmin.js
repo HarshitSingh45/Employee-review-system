@@ -27,10 +27,8 @@ function createEmpDOM(emp){
     return $(`<div class="emp" id="emp-${emp._id}">
                 <div class="emp-name">${emp.name}</div>
                 <div class="emp-actions">
+                    
                     <a href="/employees/view/${emp._id}">
-                        <button>View</button>
-                    </a>&nbsp;
-                    <a href="/employees/update/${emp._id}">
                         <button>Update</button>
                     </a>&nbsp;
                     <a class="delete-emp" href="/employees/destroy/${emp._id}">
