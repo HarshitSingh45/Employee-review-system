@@ -6,6 +6,8 @@ $("document").ready(function() {
 $('#all-emp').click(function(){
     $('#all-emp').css('color', 'green');
     $('#heading').text('All-Employees');
+});
+function loadEmployees(){
     $.ajax({
         type: 'get',
         url: '/employees/getAll',
@@ -20,7 +22,8 @@ $('#all-emp').click(function(){
             
         }
     })
-})
+}
+loadEmployees();
 
 
 function createEmpDOM(emp){

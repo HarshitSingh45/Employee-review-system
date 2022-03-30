@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/styles/allPR.css">
+<div id="container">
+    <div id="select">
+        <a href="/">
+            <div id="all-emp">All Employees</div>
+        </a>
+        <div id="all-pr">All Performance Reviews</div>
+        <a href="/assign">
+            <div id="assign-pr">Assign Performance Review</div>
+        </a>
+    </div>
+    <div id="selected-content">
+        <h1 id="heading">All Performance Review</h1>
+        <div id="all-pr-container">
+            <% for(let review of reviews) { %>
+                <div>
+                    Review Of: <%= review.reviewOf.name %> <br>
+                    Review By: <%= review.reviewBy.name %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>

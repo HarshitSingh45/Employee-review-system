@@ -17,6 +17,9 @@
             font-weight: bold;
             margin-top: 15px;
         }
+        #all-pr{
+            color: green;
+        }
     }
     #selected-content{
         display: inline-block;
@@ -29,25 +32,5 @@
         #heading{
             text-align: center;
         }
-        .emp{
-            width: 90%;
-            font-size: 1.5rem;
-            border: 1px solid black;
-            margin-bottom: 10px;
-            .emp-name{
-                text-align: left;
-                display: inline-block;
-                width: 50%;
-            }
-            .emp-actions{
-                display: inline-block;
-                width: 45%;
-                a{
-                    text-decoration: none;
-                }
-            }
-
-        }
-        
     }
 }
