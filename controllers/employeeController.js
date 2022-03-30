@@ -24,3 +24,15 @@ module.exports.destroyEmp = async(req,res) => {
     })
 
 }
+module.exports.makeAdmin = async(req,res) => {
+    let emp = await Employees.findById(req.params.id);
+    emp.isAdmin = true;
+    emp.save();
+    console.log(emp);
+    return res.json({
+        data: {
+            empId: req.params.id
+        }
+    })
+
+}

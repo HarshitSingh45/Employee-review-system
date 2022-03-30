@@ -5,5 +5,6 @@ const empController = require('../controllers/employeeController');
 
 router.get('/getAll', passport.checkAuthentication, empController.allEmp);
 router.get('/destroy/:id', passport.checkAuthentication, empController.destroyEmp);
+router.get('/makeAdmin/:id', passport.checkAuthentication, empController.makeAdmin);
 
 module.exports = router;
