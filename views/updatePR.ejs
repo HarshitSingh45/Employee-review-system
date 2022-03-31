@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/styles/updatePR.css">
+
+<div id="addPR-container">
+    <h1>Performance Review Updation Form</h1>
+    <!-- form to sign up new user -->
+    <form action="/review/update/<%= review._id %>" method="post">
+        <!-- name -->
+        <label class="label">Review Of : </label>&nbsp; <span id="revOf-name"><%= review.reviewOf.name %></span> <br><br>
+        
+        Is he/she friendly at workspace ? <br>
+        <input type="number" name="friendly" value="<%= review.friendly %>" min="0" max="10"><br><br>
+        <!-- 0<input type="range" name="friendly" min="0" max="10">10<br><br> -->
+        Is he/she is cooperative while working together ? <br>
+        <input type="number" name="cooperative" value="<%= review.cooperative %>" min="0" max="10"><br><br>
+        <!-- 0<input type="range" name="cooperative" min="0" max="10">10<br><br> -->
+        What do you rate, his/her responsibility skills ? <br>
+        <input type="number" name="responsible" value="<%= review.responsible %>" min="0" max="10"><br><br>
+        <!-- 0<input type="range" name="responsible" min="0" max="10">10<br><br> -->
+        <!-- submit button -->
+        <div id="submit-btn"><input type="submit" value="Submit" id="btn"></div>
+    </form>
+</div>

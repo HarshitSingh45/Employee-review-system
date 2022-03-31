@@ -9,22 +9,13 @@
         text-align: center;
     }
 
-    .select{
-        font-size: 1.3rem;
-        padding: 3px;
-        border: 1px solid lightseagreen;
-        border-radius: 2rem;
-        text-align: center;
-        width: 350px;
-    }
     .label{
         font-size: 1.5rem;
     }
-    .input{
-        font-size: 1.2rem;
-        border-radius: 2rem;
-        border-color: lightseagreen;
-        padding: 7px;
+    #revOf-name{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: lightseagreen;
     }
     
     #submit-btn{

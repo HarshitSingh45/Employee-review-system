@@ -7,20 +7,12 @@
   border-radius: 2rem; }
   #addPR-container h1 {
     text-align: center; }
-  #addPR-container .select {
-    font-size: 1.3rem;
-    padding: 3px;
-    border: 1px solid lightseagreen;
-    border-radius: 2rem;
-    text-align: center;
-    width: 350px; }
   #addPR-container .label {
     font-size: 1.5rem; }
-  #addPR-container .input {
-    font-size: 1.2rem;
-    border-radius: 2rem;
-    border-color: lightseagreen;
-    padding: 7px; }
+  #addPR-container #revOf-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightseagreen; }
   #addPR-container #submit-btn {
     text-align: center; }
   #addPR-container #btn {

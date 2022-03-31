@@ -39,6 +39,7 @@
                         <p>Responsible : <%= review.responsible %>/10</p>
                         <!-- displaying which employee has reviewed -->
                         <h3><span>Reviewed By: </span><span class="emp-name"><%= review.reviewBy.name %></span></h3>
+                        <a href="/review/updatePage/<%= review._id %>"><button id="update-btn">Update</button></a><br> <br>
                     <% }else{ %>
                         <!-- if PR is not reviewed yet, then we display this message -->
                         <h4>Not reviewed yet, <span class="emp-name"><%= review.reviewBy.name %></span> needs to review this</h4>

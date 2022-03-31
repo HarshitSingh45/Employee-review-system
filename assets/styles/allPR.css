@@ -2,7 +2,7 @@
   display: inline-block;
   width: 25%;
   height: auto;
-  min-height: 100vh;
+  min-height: 2000px;
   vertical-align: top;
   text-align: center;
   background-color: black; }
@@ -37,7 +37,8 @@
       height: 70px;
       border: 0px; }
   #container #selected-content #heading {
-    text-align: center; }
+    text-align: center;
+    margin-left: 15px; }
   #container #selected-content .rev {
     border: 1px solid lightseagreen;
     border-radius: 2rem;
@@ -46,3 +47,9 @@
     margin-bottom: 15px; }
     #container #selected-content .rev .emp-name {
       color: lightseagreen; }
+    #container #selected-content .rev #update-btn {
+      background-color: lightseagreen;
+      border: 0px;
+      font-size: 1.3rem;
+      color: white;
+      border-radius: 2rem; }

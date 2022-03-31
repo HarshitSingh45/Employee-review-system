@@ -3,7 +3,7 @@
         display: inline-block;
         width: 25%;
         height: auto;
-        min-height: 100vh;
+        min-height: 2000px;
         vertical-align: top;
         text-align: center;
         background-color: black;
@@ -52,6 +52,7 @@
 
         #heading{
             text-align: center;
+            margin-left: 15px;
         }
         .rev{
             border: 1px solid lightseagreen;
@@ -61,6 +62,13 @@
             margin-bottom: 15px;
             .emp-name{
                 color: lightseagreen;
+            }
+            #update-btn{
+                background-color: lightseagreen;
+                border: 0px;
+                font-size: 1.3rem;
+                color: white;
+                border-radius: 2rem;
             }
         }
     }
