@@ -1,9 +1,12 @@
-<h2>Add Employee Details Form</h2>
-<form action="/employees/create" method="post">
-    Name: <input type="text" name="name" placeholder="Enter your name"><br>
-    Email: <input type="email" name="email" placeholder="Enter email address"><br>
-    Password: <input type="password" name="password" placeholder="Enter Password"><br>
-    IsAdmin: <input type="radio" name="isAdmin" value="true"> true&nbsp; &nbsp; &nbsp;
-    <input type="radio" name="isAdmin" value="false">false <br>
-    <input type="submit" value="Submit">
-</form>
+<link rel="stylesheet" href="/styles/addEmp.css">
+<div id="addEmp-container">
+    <h1>Add Employee Details Form</h1>
+    <form action="/employees/create" method="post">
+        <span class="label">Name: </span> <input type="text" name="name" class="input" placeholder="Enter your name"><br><br>
+        <span class="label">Email: </span> <input type="email" name="email" class="input" placeholder="Enter email address"><br><br>
+        <span class="label">Password: </span> <input type="password" name="password" class="input" placeholder="Enter Password"><br><br>
+        <span class="label">IsAdmin: </span> <input type="radio" name="isAdmin" value="true"> <span class="radio"> True</span> &nbsp; &nbsp; &nbsp;
+        <input type="radio" name="isAdmin" value="false"><span class="radio"> False</span>  <br><br>
+        <div id="submit-btn"><input type="submit" value="Submit" id="btn"></div>
+    </form>
+</div>
