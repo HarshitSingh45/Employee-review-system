@@ -27,6 +27,29 @@
         min-height: 100vh;
         text-align: center;
 
+        #allpr-header{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            #allpr-heading{
+                #heading{
+                    text-align: center;
+                }
+            }
+            #addpr-button{
+                #btn{
+                    font-size: 1.3rem;
+                    border-radius: 2rem;
+                    background-color: lightseagreen;
+                    color: white;
+                    width: 150px;
+                    height: 70px;
+                    border: 0px;
+                }
+            }
+            
+        }
+
         #heading{
             text-align: center;
         }

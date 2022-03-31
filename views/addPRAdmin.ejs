@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/styles/addPRAdmin.css">
+<!-- Sign up form page -->
+<div id="addPR-container">
+    <h1>Performance Review Form</h1>
+    <!-- form to sign up new user -->
+    <form action="/assign/prbyAdmin" method="post">
+        <!-- name -->
+        <label class="label">Review Of : </label>&nbsp;
+        <select name="reviewOf" required class="select">
+            <% for(let emp of employees) { %>
+                <option value="<%= emp._id %>"><%= emp.name %></option>
+            <% } %>
+        </select><br><br>
+        Is he/she friendly at workspace ? <br>
+        0<input type="range" name="friendly" min="0" max="10">10<br><br>
+        Is he/she is cooperative while working together ? <br>
+        0<input type="range" name="cooperative" min="0" max="10">10<br><br>
+        What do you rate, his/her responsibility skills ? <br>
+        0<input type="range" name="responsible" min="0" max="10">10<br><br>
+        <!-- submit button -->
+        <div id="submit-btn"><input type="submit" value="Submit" id="btn"></div>
+    </form>
+</div>

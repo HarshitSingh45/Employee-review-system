@@ -22,6 +22,20 @@
   height: auto;
   min-height: 100vh;
   text-align: center; }
+  #container #selected-content #allpr-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; }
+    #container #selected-content #allpr-header #allpr-heading #heading {
+      text-align: center; }
+    #container #selected-content #allpr-header #addpr-button #btn {
+      font-size: 1.3rem;
+      border-radius: 2rem;
+      background-color: lightseagreen;
+      color: white;
+      width: 150px;
+      height: 70px;
+      border: 0px; }
   #container #selected-content #heading {
     text-align: center; }
   #container #selected-content .rev {

@@ -10,13 +10,22 @@
         <div id="all-pr">All Performance Reviews</div>
         <!-- click to assign performance review to an employee -->
         <a href="/assign">
-            <div id="assign-pr">Assign Performance Review</div>
+            <div id="assign-pr">Assign Performance Reviews</div>
         </a>
     </div>
     <!-- div to display all pr -->
     <div id="selected-content">
         <!-- heading -->
-        <h1 id="heading">All Performance Review</h1>
+        <div id="allpr-header">
+            <div id="allpr-heading">
+                <h1 id="heading">All Performance Reviews</h1>
+            </div>
+            <div id="addpr-button">
+                <a href="/assign/addPRAdmin">
+                    <button id="btn">Add PR</button>
+                </a>
+            </div>
+        </div>
         <div id="all-pr-container">
             <!-- each PR will displayed  -->
             <% for(let review of reviews) { %>

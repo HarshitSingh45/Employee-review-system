@@ -25,3 +25,21 @@ module.exports.addReview = async(req, res) => {
     });
     return res.redirect('/assign/allPR');
 }
+module.exports.addPRAdmin = async(req, res) => {
+    let employees = await Employees.find({isAdmin: false});
+    return res.render('addPRAdmin', {
+        employees
+    })
+}
+
+module.exports.prbyAdmin = async(req, res) => {
+    let review = Reviews.create({
+        reviewOf: req.body.reviewOf,
+        reviewBy: req.user._id,
+        friendly: req.body.friendly,
+        cooperative: req.body.cooperative,
+        responsible: req.body.responsible,
+        isReviewed: true
+    });
+    return res.redirect('/assign/allPR');
+}
