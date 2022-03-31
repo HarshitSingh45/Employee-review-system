@@ -3,7 +3,6 @@
   width: 25%;
   height: auto;
   min-height: 100vh;
-  border: 1px solid blue;
   vertical-align: top;
   text-align: center;
   background-color: black; }
@@ -15,19 +14,21 @@
     font-weight: bold;
     margin-top: 15px; }
   #container #select #all-pr {
-    color: green; }
+    color: lightseagreen; }
 
 #container #selected-content {
   display: inline-block;
   width: 72%;
   height: auto;
   min-height: 100vh;
-  border: 1px solid coral;
   text-align: center; }
   #container #selected-content #heading {
     text-align: center; }
   #container #selected-content .rev {
-    border: 1px solid black;
+    border: 1px solid lightseagreen;
+    border-radius: 2rem;
     width: 80%;
     margin: auto;
     margin-bottom: 15px; }
+    #container #selected-content .rev .emp-name {
+      color: lightseagreen; }

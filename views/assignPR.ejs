@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="/styles/assignPR.css">
+<!-- Page to  assign Performance review to an employee -->
 <div id="container">
+    <!-- select actions -->
     <div id="select">
         <a href="/">
             <div id="all-emp">All Employees</div>
@@ -9,23 +11,31 @@
         </a>
         <div id="assign-pr">Assign Performance Review</div>
     </div>
+    <!-- div will display form to assign task -->
     <div id="selected-content">
+        <!-- heading -->
         <h1 id="heading">Assign Performance Review</h1>
         <div id="assign">
+            <!-- form -->
             <form action="/assign/addPR" method="post">
-                <label>Review Of :</label>
-                <select name="reviewOf" required>
+                <!-- ReviewOf - which employee's performance will be reviewed -->
+                <label class="label">Review Of : </label>&nbsp;
+                <!-- displaying all the employees name -->
+                <select name="reviewOf" required class="select">
                     <% for(let emp of employees) { %>
                         <option value="<%= emp._id %>"><%= emp.name %></option>
                     <% } %>
-                </select><br>
-                <label>Review By :</label>
-                <select name="reviewBy" required>
+                </select><br><br>
+                <!-- ReviewBy - which employee will review -->
+                <label class="label">Review By : </label>&nbsp;
+                <!-- displaying all th employees name -->
+                <select name="reviewBy" required class="select">
                     <% for(let emp of employees) { %>
                         <option value="<%= emp._id %>"><%= emp.name %></option>
                     <% } %>
-                </select><br>
-                <input type="submit" value="Submit">
+                </select><br><br>
+                <!-- submit button -->
+                <input type="submit" value="Assign" id="btn">
             </form>
         </div>
     </div>

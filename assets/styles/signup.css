@@ -1,0 +1,28 @@
+#signup-container {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 30px;
+  border: 1px solid lightseagreen;
+  border-radius: 2rem; }
+  #signup-container h1 {
+    text-align: center; }
+  #signup-container .label {
+    font-size: 1.5rem; }
+  #signup-container .input {
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    border-color: lightseagreen;
+    padding: 7px; }
+  #signup-container .radio {
+    font-size: 1.2rem; }
+  #signup-container #submit-btn {
+    text-align: center; }
+  #signup-container #btn {
+    font-size: 1.3rem;
+    border-radius: 2rem;
+    background-color: lightseagreen;
+    color: white;
+    width: 150px;
+    height: 70px;
+    border: 0px; }

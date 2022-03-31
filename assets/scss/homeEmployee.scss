@@ -1,0 +1,31 @@
+#heading, h2{
+    margin-left: 15px;
+}
+#review-container{
+    .rev{
+        width: 70%;
+        margin-left: 15px;
+        border: 1px solid lightseagreen;
+        border-radius: 2rem;
+        margin-bottom: 15px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+
+        .emp-name{
+            color: lightseagreen;
+            font-weight: bolder;
+        }
+        #submit-btn{
+            text-align: center;
+        }
+        #btn{
+            font-size: 1.3rem;
+            border-radius: 2rem;
+            background-color: lightseagreen;
+            color: white;
+            width: 250px;
+            height: 50px;
+            border: 0px;
+        }
+    }
+}

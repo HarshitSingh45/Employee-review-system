@@ -1,18 +1,20 @@
-<h1>Hello !! <%= locals.user.name  %></h1>
+<link rel="stylesheet" href="/styles/homeEmployee.css">
+<!-- Displaying hello message to the employee who logged in -->
+<h1 id="heading">Hello !! <%= locals.user.name  %></h1>
 <h2>Pending Reviews</h2>
+<!-- displaying pending reviews -->
 <div id="review-container">
     <% for(let review of reviews) { %>
-        <div>
-            <h4><%= review.reviewOf.name %> Performance Review</h4>
+        <div class="rev">
+            <h4><span class="emp-name"><%= review.reviewOf.name %>'s</span> Performance Review</h4>
             <form action="/review/submit/<%= review._id %>" method="post">
                 Is <%= review.reviewOf.name %> is friendly at workspace ? <br>
-                0<input type="range" name="friendly" min="0" max="10">10<br>
+                0<input type="range" name="friendly" min="0" max="10">10<br><br>
                 Is <%= review.reviewOf.name %> is cooperative while working together ? <br>
-                0<input type="range" name="cooperative" min="0" max="10">10<br>
+                0<input type="range" name="cooperative" min="0" max="10">10<br><br>
                 What do you rate, <%= review.reviewOf.name %>'s responsibility skills ? <br>
                 0<input type="range" name="responsible" min="0" max="10">10<br><br>
-                <input type="submit" value="submit">
-        
+                <div id="submit-btn"><input type="submit" value="Submit Review" id="btn"></div>        
             </form>
         </div>
     <% } %>

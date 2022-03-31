@@ -14,6 +14,10 @@ module.exports.allPR = async(req, res) => {
     });
 }
 module.exports.addReview = async(req, res) => {
+    if(req.body.reviewOf == req.body.reviewBy){
+        console.log('An employee cannot review his own performance review, Try using different employee')
+        return res.redirect('back');
+    }
     let review = await Reviews.create({
         reviewOf: req.body.reviewOf,
         reviewBy: req.body.reviewBy,

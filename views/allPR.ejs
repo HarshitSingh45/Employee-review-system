@@ -1,27 +1,38 @@
 <link rel="stylesheet" href="/styles/allPR.css">
+<!-- All performance reviews will be displayed here -->
 <div id="container">
+    <!-- select container to select actions -->
     <div id="select">
+        <!-- click to view all employees -->
         <a href="/">
             <div id="all-emp">All Employees</div>
         </a>
         <div id="all-pr">All Performance Reviews</div>
+        <!-- click to assign performance review to an employee -->
         <a href="/assign">
             <div id="assign-pr">Assign Performance Review</div>
         </a>
     </div>
+    <!-- div to display all pr -->
     <div id="selected-content">
+        <!-- heading -->
         <h1 id="heading">All Performance Review</h1>
         <div id="all-pr-container">
+            <!-- each PR will displayed  -->
             <% for(let review of reviews) { %>
                 <div class="rev">
-                    <p><span>Review Of: </span><span><%= review.reviewOf.name %></span></p>
+                    <!-- dispalying reviewOf employee name -->
+                    <h2><span>Review Of: </span><span class="emp-name"><%= review.reviewOf.name %></span></h2>
                     <% if(review.isReviewed){ %>
+                        <!-- if review is completed then all answered questions will be displayed here -->
                         <p>Friendly : <%= review.friendly %>/10</p>
                         <p>Cooperative : <%= review.cooperative %>/10</p>
                         <p>Responsible : <%= review.responsible %>/10</p>
-                        <p><span>Reviewed By: </span><span><%= review.reviewBy.name %></span></p>
+                        <!-- displaying which employee has reviewed -->
+                        <h3><span>Reviewed By: </span><span class="emp-name"><%= review.reviewBy.name %></span></h3>
                     <% }else{ %>
-                        <h4>Not reviewed, <%= review.reviewBy.name %> needs to review this</h4>
+                        <!-- if PR is not reviewed yet, then we display this message -->
+                        <h4>Not reviewed yet, <span class="emp-name"><%= review.reviewBy.name %></span> needs to review this</h4>
                     <% } %>
                 </div>
             <% } %>

@@ -1,10 +1,21 @@
-<h2>Sign-Up Form</h2>
-<form action="/users/create" method="post">
-    Name: <input type="text" name="name" placeholder="Enter your name"><br>
-    Email: <input type="email" name="email" placeholder="Enter email address"><br>
-    Password: <input type="password" name="password" placeholder="Enter Password"><br>
-    Confirm Password: <input type="password" name="cpassword" placeholder="Confirm password"><br>
-    IsAdmin: <input type="radio" name="isAdmin" value="true"> true&nbsp; &nbsp; &nbsp;
-    <input type="radio" name="isAdmin" value="false">false <br>
-    <input type="submit" value="Submit">
-</form>
+<link rel="stylesheet" href="/styles/signup.css">
+<!-- Sign up form page -->
+<div id="signup-container">
+    <h1>Sign-Up Form</h1>
+    <!-- form to sign up new user -->
+    <form action="/users/create" method="post">
+        <!-- name -->
+        <span class="label">Name: </span> <input type="text" name="name" required class="input" placeholder="Enter your name"><br><br>
+        <!-- email -->
+        <span class="label">Email: </span><input type="email" name="email" required class="input" placeholder="Enter email address"><br><br>
+        <!-- password -->
+        <span class="label">Password: </span><input type="password" name="password" required class="input" placeholder="Enter Password"><br><br>
+        <!-- confirm password -->
+        <span class="label">Confirm Password: </span><input type="password" name="cpassword" required class="input" placeholder="Confirm password"><br><br>
+        <!-- isAdmin -->
+        <span class="label">IsAdmin: </span><input type="radio" name="isAdmin" value="true"> <span class="radio">True</span>&nbsp; &nbsp; &nbsp;
+        <input type="radio" name="isAdmin" value="false"><span class="radio"> False</span> <br><br>
+        <!-- submit button -->
+        <div id="submit-btn"><input type="submit" value="Submit" id="btn"></div>
+    </form>
+</div>

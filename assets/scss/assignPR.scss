@@ -4,7 +4,6 @@
         width: 25%;
         height: auto;
         min-height: 100vh;
-        border: 1px solid blue;
         vertical-align: top;
         text-align: center;
         background-color: black;
@@ -18,7 +17,7 @@
             margin-top: 15px;
         }
         #assign-pr{
-            color: green;
+            color: lightseagreen;
         }
     }
     #selected-content{
@@ -26,11 +25,39 @@
         width: 72%;
         height: auto;
         min-height: 100vh;
-        border: 1px solid coral;
         text-align: center;
 
         #heading{
             text-align: center;
+        }
+    }
+    #assign{
+        width: 70%;
+        margin: auto;
+        margin-top: 40px;
+        padding: 30px;
+        border: 1px solid lightseagreen;
+        border-radius: 2rem;
+        .label{
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .select{
+            font-size: 1.3rem;
+            padding: 3px;
+            border: 1px solid lightseagreen;
+            border-radius: 2rem;
+            text-align: center;
+            width: 350px;
+        }
+        #btn{
+            font-size: 1.3rem;
+            border-radius: 2rem;
+            background-color: lightseagreen;
+            color: white;
+            width: 150px;
+            height: 70px;
+            border: 0px;
         }
     }
 }

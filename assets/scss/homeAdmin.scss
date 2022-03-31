@@ -4,7 +4,6 @@
         width: 25%;
         height: auto;
         min-height: 100vh;
-        border: 1px solid blue;
         vertical-align: top;
         text-align: center;
         background-color: black;
@@ -23,17 +22,39 @@
         width: 72%;
         height: auto;
         min-height: 100vh;
-        border: 1px solid coral;
+        margin-left: 15px;
         text-align: center;
 
-        #heading{
-            text-align: center;
+        #allemp-header{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            #allemp-heading{
+                #heading{
+                    text-align: center;
+                }
+            }
+            #addemp-button{
+                #btn{
+                    font-size: 1.3rem;
+                    border-radius: 2rem;
+                    background-color: lightseagreen;
+                    color: white;
+                    width: 150px;
+                    height: 70px;
+                    border: 0px;
+                }
+            }
+            
         }
+        
         .emp{
             width: 90%;
             font-size: 1.5rem;
-            border: 1px solid black;
+            border: 1px solid lightseagreen;
+            border-radius: 2rem;
             margin-bottom: 10px;
+            padding: 7px;
             .emp-name{
                 text-align: left;
                 display: inline-block;
@@ -44,10 +65,15 @@
                 width: 45%;
                 a{
                     text-decoration: none;
+                    .emp-action-button{
+                        background-color: lightseagreen;
+                        border: 0px;
+                        border-radius: 2rem;
+                        font-size: 1.2rem;
+                        color: white;
+                    }
                 }
             }
-
-        }
-        
+        } 
     }
 }

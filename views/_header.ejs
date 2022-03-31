@@ -1,8 +1,23 @@
-Header &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-<% if(locals.user) { %>
-    <a href="/users/destroy">LogOut</a>
-<% }else{ %>
-    <a href="/users/signup">Sign-Up</a>
-    &nbsp; 
-    <a href="/users/signin">Sign-In</a>
-<% } %>
+<link rel="stylesheet" href="/styles/header.css">
+<!-- Header of layout -->
+<div id="header">
+    <!-- WebApp name -->
+    <a href="/">
+        <div id="logo">
+            Employee Review System
+        </div>
+    </a>
+    <!-- signin signup and logout options -->
+    <div id="login">
+        <% if(locals.user) { %>
+            <!-- if user is logged in -->
+            <a href="/users/destroy">LogOut</a>
+        <% }else{ %>
+            <!-- if no user has logged in -->
+            <a href="/users/signup">Sign-Up</a>
+            &nbsp; 
+            <a href="/users/signin">Sign-In</a>
+        <% } %>
+    </div>
+</div>
+

@@ -1,6 +1,14 @@
-<h2>Sign-In Form</h2>
-<form action="/users/createSession" method="post">
-    Email: <input type="email" name="email" placeholder="Enter email address"><br>
-    Password: <input type="password" name="password" placeholder="Enter Password"><br>
-    <input type="submit" value="Submit">
-</form>
+<link rel="stylesheet" href="/styles/signin.css">
+<!-- sign in form page -->
+<div id="signin-container">
+    <h1>Sign-In Form</h1>
+    <!-- form to sign in user -->
+    <form action="/users/createSession" method="post">
+        <!-- user email -->
+        <span class="label">Email: </span> <input type="email" name="email" required class="input" placeholder="Enter email address"><br><br>
+        <!-- user password -->
+        <span class="label">Password: </span> <input type="password" name="password" required class="input" placeholder="Enter Password"><br><br>
+        <!-- submit button -->
+        <div id="submit-btn"><input type="submit" value="Submit" id="btn"></div>
+    </form>
+</div>
